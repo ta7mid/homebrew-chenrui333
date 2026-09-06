@@ -10,12 +10,12 @@ class BreatheCli < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3bf545378ebc7c68a9c726a17aeedaec03cf5be7450679cd19d3c52011b6ca92"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3bf545378ebc7c68a9c726a17aeedaec03cf5be7450679cd19d3c52011b6ca92"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3bf545378ebc7c68a9c726a17aeedaec03cf5be7450679cd19d3c52011b6ca92"
-    sha256 cellar: :any_skip_relocation, sequoia:       "0b50f2a00780a2e52192e3410ecda2459f155dc459fcc397b342e8c4304b586c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0b50f2a00780a2e52192e3410ecda2459f155dc459fcc397b342e8c4304b586c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b50f2a00780a2e52192e3410ecda2459f155dc459fcc397b342e8c4304b586c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1f6d288197e5d77c871c778f161ab141322b091ae82a634b8385c24b51c30f38"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1f6d288197e5d77c871c778f161ab141322b091ae82a634b8385c24b51c30f38"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1f6d288197e5d77c871c778f161ab141322b091ae82a634b8385c24b51c30f38"
+    sha256 cellar: :any_skip_relocation, sequoia:       "3930173b94413378e4bae2aa51ba55257743384376487f8e45b8b95fd6bdebd5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3930173b94413378e4bae2aa51ba55257743384376487f8e45b8b95fd6bdebd5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3930173b94413378e4bae2aa51ba55257743384376487f8e45b8b95fd6bdebd5"
   end
 
   depends_on "python@3.13"
