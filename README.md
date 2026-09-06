@@ -222,6 +222,7 @@ brew install --cask <tool>
 - `context-analyzer`
 - `context-file-manager`
 - `context42`
+- `cooldeck`
 - `copilot-cli`
 - `countryfetch`
 - `cozypkg`
@@ -243,6 +244,7 @@ brew install --cask <tool>
 - `cueitup`
 - `cull`
 - `curlconverter`
+- `curlmin`
 - `darya`
 - `datacmd`
 - `datadog-mcp-server`
@@ -528,6 +530,7 @@ brew install --cask <tool>
 - `labcoat`
 - `lacquer`
 - `lathe`
+- `layerx`
 - `lazycelery`
 - `lazycli`
 - `lazyenv`
@@ -776,9 +779,11 @@ brew install --cask <tool>
 - `rang`
 - `rawhide`
 - `rbac-lookup`
+- `rdrview`
 - `rds-command-line-tools`
 - `readmeai`
 - `recall`
+- `reeve`
 - `reformat-gherkin`
 - `refurb`
 - `relay`
@@ -828,6 +833,7 @@ brew install --cask <tool>
 - `seamstress`
 - `seastar`
 - `secco`
+- `seednaut`
 - `sem-cli`
 - `semaphore`
 - `sephera`
@@ -1024,6 +1030,7 @@ brew install --cask <tool>
 - `wut-cli`
 - `xcpkg`
 - `xfr`
+- `xled`
 - `xmlformatter`
 - `xpdig`
 - `xytz`
