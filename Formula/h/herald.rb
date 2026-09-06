@@ -12,6 +12,15 @@ class Herald < Formula
     strategy :github_tags
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "90760d15ddec4f001564921f0945e617ac488d62565fdc1e3308e7f836084ccd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62c58485988cf8380bb0dde7af0442c40d24d8a88c076716b8ce80e0951012ba"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b65feb3079822657cea2caf019297de0a2893b9a6ee959ffe5e1cde4072bfab6"
+    sha256 cellar: :any,                 arm64_linux:   "1f27d3676a794a8409062d1403466d0918d9e2f8540db716b8138449a4050cc4"
+    sha256 cellar: :any,                 x86_64_linux:  "29ef4c68a8979aa531dbf45700b13ab787c61573075573f79d36e022c034852c"
+  end
+
   depends_on "go" => :build
 
   def install
