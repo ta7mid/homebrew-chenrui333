@@ -6,6 +6,12 @@ class Amdtop < Formula
   license "Apache-2.0"
   head "https://github.com/lhl/amdtop.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any, arm64_linux:  "d30e79ac6b9312552065c8b7410a5a3af9b9a90ac56c4b616d681ed4bb43c41f"
+    sha256 cellar: :any, x86_64_linux: "5b69343805b7d816e1c56558618cf16d816dcf49190ebf7489c20531308612d3"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "libdrm"
