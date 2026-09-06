@@ -6,6 +6,15 @@ class Noodle < Formula
   license "Apache-2.0"
   head "https://github.com/wilfredinni/noodle.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any,                 arm64_tahoe:   "f00b7caee72e2974d21b99d3872b16396a9dfafcdfc3cd0cf4e3dab45e476831"
+    sha256 cellar: :any,                 arm64_sequoia: "02162b51980710863e9bf45fb42cdbbaa06af1c8a88a39301d10a43ff1b83f31"
+    sha256 cellar: :any,                 arm64_sonoma:  "7ea9a3521bbcfb878a7dcc2372a4c7002e6264460bc8e6c7e68f7aaacca1be0e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "74606765d6787251a30150029d5059cb81b9ab5c75b37ebf608dff4a6bea0b86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "45fa8a5ab56ccfda260284394cd2450e06cbb468e3c4701251e17ef110cd610a"
+  end
+
   depends_on "zig" => :build
   depends_on "bun"
 
