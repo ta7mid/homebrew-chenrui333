@@ -8,6 +8,11 @@ class Rogallo < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/davep/rogallo.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, all: "abecdba71fb59dbcd7e8e13df73094f094b59277a77a1e45262d1905395e1a1b"
+  end
+
   depends_on "rust" => :build
   depends_on "cryptography" => :no_linkage
   depends_on "python@3.14"
