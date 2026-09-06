@@ -6,6 +6,15 @@ class Moji < Formula
   license "MIT"
   head "https://github.com/Microck/moji.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c557f75024c030cbe33e5887979f332d11fd4a547b668649ebf1d47e98cea8dd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c557f75024c030cbe33e5887979f332d11fd4a547b668649ebf1d47e98cea8dd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c557f75024c030cbe33e5887979f332d11fd4a547b668649ebf1d47e98cea8dd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "327f419ae820662809034661dc8bf5e6caa3bc51ccf0c076e460176969d3f1d1"
+    sha256 cellar: :any,                 x86_64_linux:  "c08782dccc8a7fdfd11b82861107076750b77a271521f9f6cd1c4ca340b56445"
+  end
+
   depends_on "go" => :build
 
   def install
