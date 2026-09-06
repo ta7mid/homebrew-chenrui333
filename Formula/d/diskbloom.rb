@@ -6,6 +6,15 @@ class Diskbloom < Formula
   license "Apache-2.0"
   head "https://github.com/Zingzy/diskbloom.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f09d8ea52f05bbbc0173c1705a6ffb6a4ec8507a4a43546059d9e099e164b192"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f09d8ea52f05bbbc0173c1705a6ffb6a4ec8507a4a43546059d9e099e164b192"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f09d8ea52f05bbbc0173c1705a6ffb6a4ec8507a4a43546059d9e099e164b192"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d081d18e1feb594cd698ab32f947b3bd459308b07485664171ab11fc49195b3a"
+    sha256 cellar: :any,                 x86_64_linux:  "b00db003b61442277497b4ba9c380b057533490241a555ca058f832267c2ffe2"
+  end
+
   depends_on "go" => :build
 
   def install
