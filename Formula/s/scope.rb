@@ -6,6 +6,15 @@ class Scope < Formula
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/matheuswhite/scope-rs.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9a8bc03d26ce1481e898cfcdf574fb7d648cdf913e5a6ced51b4659cccc207ef"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a0042480a69aa3b8069c8de98acfa83827c4cf095585ca8e9f4a5c7621c9e299"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "42f96df43a8aece9725f2d72a3ed6f490279088f4f0d015c03bf649a76c2ef08"
+    sha256 cellar: :any,                 arm64_linux:   "abe927da4cf2da7abc8a7b22dd2e7fe839edc51988a1d97aec3b93489e841ec9"
+    sha256 cellar: :any,                 x86_64_linux:  "565e1880e1562d6b1fdb9fc44ede2c99b1ecb5416429b16b8612e0203939418a"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
