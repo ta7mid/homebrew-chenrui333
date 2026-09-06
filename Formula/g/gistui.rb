@@ -6,6 +6,15 @@ class Gistui < Formula
   license "MIT"
   head "https://github.com/akunzai/gistui.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cf1ef26b69eb382ad0f8f4469f0b607a748984aa4889294f017dfac5037fbb6b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "69d8fd6da8786370aedd8637fa02c43f57d35622fa2eb68d5a71e146986fbd46"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a134f9202550d39a523912757197484a0976df83e7dab53dce582edaeebb274d"
+    sha256 cellar: :any,                 arm64_linux:   "f657653257304c440cb2ff18312aa3cf480e96c6fcc3460fbffd59dbc3a13d6d"
+    sha256 cellar: :any,                 x86_64_linux:  "0d344780ba08db13896c8bb9361dbdc967ab5e5c6f3962069478813809fe71f2"
+  end
+
   depends_on "rust" => :build
   depends_on "gh"
 
