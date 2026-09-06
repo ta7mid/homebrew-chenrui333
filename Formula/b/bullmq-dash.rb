@@ -6,6 +6,15 @@ class BullmqDash < Formula
   license "MIT"
   head "https://github.com/quanghuynt14/bullmq-dash.git", branch: "master"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any,                 arm64_tahoe:   "94f46197823c8886137afcafc8811b3a68258eb0a6d80a075eb906ec71037110"
+    sha256 cellar: :any,                 arm64_sequoia: "9b064573efcb606afa444ef4b9363bdceff730fb80cb36f029e846dca2ded6d2"
+    sha256 cellar: :any,                 arm64_sonoma:  "e415b312d378640de49af5be8b9b81445102aadb9e389db3ee524fcce2c2a31d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f2db24d5aa59d186671e29d69a999a3f9ad3d9a3cbe2e03d9108d5c69138deb3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7deed1b13df73b2679caa466537240b9c0360911fd3a47ce1f036e4a560ef0f6"
+  end
+
   depends_on "zig@0.15" => :build
   depends_on "bun"
 
