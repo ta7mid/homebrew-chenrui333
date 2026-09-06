@@ -6,6 +6,13 @@ class Nastro < Formula
   license "MIT"
   head "https://github.com/scaccogatto/nastro.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0519139100b2293399cac83b735da201879ffcb733604fe4b8cd7b029dc5b70f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "29c496b6080952d94553cdfa7bb8b19f2525a122c3f19bea03f7f8c9769bdb60"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bb7aed75b856aae4481525c9a36982b4d3b397f75f6b58372b65ca8b4d93b7b5"
+  end
+
   depends_on "go" => :build
   depends_on xcode: ["15.3", :build]
   depends_on :macos
