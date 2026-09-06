@@ -8,6 +8,11 @@ class Asmdiff < Formula
   license "MIT"
   head "https://github.com/rt-rtos/asmdiff.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/chenrui333/tap"
+    sha256 cellar: :any_skip_relocation, all: "5993939e3c5aecd78e7c578f3760daec596d40d8aaada58012e9d73f2f7fea69"
+  end
+
   depends_on "python@3.14"
 
   def install
