@@ -1,18 +1,18 @@
 class Codemap < Formula
   desc "Generate a brain map of a codebase for LLM context"
   homepage "https://github.com/JordanCoin/codemap"
-  url "https://github.com/JordanCoin/codemap/archive/refs/tags/v4.2.1.tar.gz"
-  sha256 "66ab973f5d77df498206d95beed974066d3dd72f69aa5857b66fb3c0523d62fc"
+  url "https://github.com/JordanCoin/codemap/archive/refs/tags/v4.5.0.tar.gz"
+  sha256 "77327ec41dbad2da75b6873e9c4bafdef80b832f07d8680367b31d84b21450d4"
   license "MIT"
   head "https://github.com/JordanCoin/codemap.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4bf61938ed5084b7adf229b56533b2dd993fff216f1ef01be7b6956f30fae256"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4bf61938ed5084b7adf229b56533b2dd993fff216f1ef01be7b6956f30fae256"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4bf61938ed5084b7adf229b56533b2dd993fff216f1ef01be7b6956f30fae256"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4d2653d489d490c6dc7e59cba823945b866cfab215c2adfe552a2af1fb2ac37a"
-    sha256 cellar: :any,                 x86_64_linux:  "61fa5f5a2d45b0e9fd7d7b803325bb3587d860e3a0366a7b024c82bac5f308da"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b7cf8f99d211cdfce1a3c6467f62cd485e925ad3141667f79e7903036b762ca4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b7cf8f99d211cdfce1a3c6467f62cd485e925ad3141667f79e7903036b762ca4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b7cf8f99d211cdfce1a3c6467f62cd485e925ad3141667f79e7903036b762ca4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2be053ef388d0d9e8096663f8fc42085d61a4776031fa4d312798d583f41c227"
+    sha256 cellar: :any,                 x86_64_linux:  "0d7c90bfcd58ca58404444a33d174055ae27eddc044c08e0720c2da27f3f3651"
   end
 
   depends_on "go" => :build

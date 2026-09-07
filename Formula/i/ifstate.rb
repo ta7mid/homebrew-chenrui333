@@ -3,15 +3,15 @@ class Ifstate < Formula
 
   desc "Manage host interface settings in a declarative manner"
   homepage "https://ifstate.net"
-  url "https://codeberg.org/liske/ifstate/archive/2.4.1.tar.gz"
-  sha256 "60b47a5990ed9bd2956f1a382aed2dc0b9b26052aaf5560cfec346d2f88c87cf"
+  url "https://codeberg.org/liske/ifstate/archive/2.4.2.tar.gz"
+  sha256 "75f7b74769ab8ec44d2cc70298e646a0ed6c6244c2c6032ce099220c0d60d134"
   license "MIT"
   head "https://codeberg.org/liske/ifstate.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any, arm64_linux:  "3e644ebe84428af2d796ccb370815518c86d61808aabdc0ee52564d2bc43a3a9"
-    sha256 cellar: :any, x86_64_linux: "fdee6a7661fabe143e61ceeb0a0f79f8db4e7dcbb719f33fade067ce843bcfcc"
+    sha256 cellar: :any, arm64_linux:  "3d6c0e7e9235e98c28603bbc946b044c2297fb38c342c0dc7dadd9bfeb3d7b6c"
+    sha256 cellar: :any, x86_64_linux: "2cd672f4d1670b8c3c95db5f38a64678a9ea8eea105d99a60abde820c4b0037e"
   end
 
   depends_on "libyaml"

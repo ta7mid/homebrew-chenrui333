@@ -2,17 +2,17 @@ class Termide < Formula
   desc "Cross-platform terminal-based IDE, file manager, and virtual terminal"
   homepage "https://termide.github.io"
   url "https://github.com/termide/termide.git",
-      tag:      "0.29.7",
-      revision: "d75a56d0157cd5bfe61cc6c7ec520a30875c1436"
+      tag:      "0.31.0",
+      revision: "d67f14fa3386ef3ad3dc76b347117189bae51ebe"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e71eda5ce29821e3e6988907089a6b7642d77f095d5df1763721bc08a8c29467"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "543a9f34df413c102cd4c13910ebaf3eadccbcf4baf00ed3ac25af5fa4b3bbe9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e1cc7fd06f568269ca9db8bfa3f4e7eb6784e3efec632424522e101e3a6aae0d"
-    sha256 cellar: :any,                 arm64_linux:   "6f1bd0f10633e68bb1159e3c73a23424ad36fc4a100addb0bf36aa33a0791e02"
-    sha256 cellar: :any,                 x86_64_linux:  "eea584276fc917242ba2f40796a31eb3d0af4af7b5c414095d4f4ca0e02dcd92"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ab2b6eaabab16c7e99cc19facf9db501177db5f45e01d70f97b3084d76475bcb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19dcf4b27166e23fdcf627fc5350f1f8f467ec050b6aaf60afcbf33ded3353e2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7d3a95b6d9173b5d6c32231518c84ea6a1d9e7e178a9a2a6ff04be0aa015d1aa"
+    sha256 cellar: :any,                 arm64_linux:   "5477eeb7bd89376fe07cc03b7a50ee40be95332a6ef4db6adb212a4fecd0de11"
+    sha256 cellar: :any,                 x86_64_linux:  "adbfa7af0b7cb3d54636b0712f4d46514ceb3c60a8af94c2a0bc25e6e0081d16"
   end
 
   depends_on "pkgconf" => :build

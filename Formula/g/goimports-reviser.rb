@@ -1,18 +1,18 @@
 class GoimportsReviser < Formula
   desc "Right imports sorting & code formatting tool (goimports alternative)"
   homepage "https://github.com/incu6us/goimports-reviser"
-  url "https://github.com/incu6us/goimports-reviser/archive/refs/tags/v3.12.6.tar.gz"
-  sha256 "f89b39bd6888c8a1919394c1d3dd2f622da38855f1709879c3fbdde8e6bf540b"
+  url "https://github.com/incu6us/goimports-reviser/archive/refs/tags/v3.13.2.tar.gz"
+  sha256 "17c90e414f492cb1d0444845655b45729bf0636d6f421a3b17180702713a3934"
   license "MIT"
   head "https://github.com/incu6us/goimports-reviser.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a8c440360621cdb997f138811a6cb95a771ce0607281a6b2913851dbde39ce58"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a8c440360621cdb997f138811a6cb95a771ce0607281a6b2913851dbde39ce58"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a8c440360621cdb997f138811a6cb95a771ce0607281a6b2913851dbde39ce58"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fdf985f6734c377f77a10b05a0f02762f7d45317af5b9b2197b58793e9c0c0bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "554562d016b50a29ff1a68413e00e1627dfe6ccad8ae34c346ed46e87b3273f0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "be3183d84e37fc4f77a6d2bbd1aa2f8da1b0388ef73a46c3795e07093ea29cd0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "be3183d84e37fc4f77a6d2bbd1aa2f8da1b0388ef73a46c3795e07093ea29cd0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "be3183d84e37fc4f77a6d2bbd1aa2f8da1b0388ef73a46c3795e07093ea29cd0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4e5ccd9c7388d9deee7d08a5321517c12d3fa4ba1e20cdec99095e1d7b53d666"
+    sha256 cellar: :any,                 x86_64_linux:  "93b4495c030350d71a7b2fddb95a927cc6c3d14e9f167996a71ba4261dcc49e3"
   end
 
   depends_on "go" => :build

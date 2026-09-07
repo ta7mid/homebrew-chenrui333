@@ -3,15 +3,19 @@ class BreatheCli < Formula
 
   desc "Paced resonance breathing in your terminal"
   homepage "https://github.com/marekkowalczyk/breathe-cli"
-  url "https://github.com/marekkowalczyk/breathe-cli/archive/refs/tags/v1.9.tar.gz"
-  sha256 "8842ea690828e6c4acfd1d0887ed86b7d209d863fc7b4c644581461412b4e2dd"
+  url "https://github.com/marekkowalczyk/breathe-cli/archive/refs/tags/v1.14.0.tar.gz"
+  sha256 "7eff35359860241a0217ae4a99aebbdf4f6f4f316ee02b6438ea6afdeb8f32ad"
   license "MIT"
   head "https://github.com/marekkowalczyk/breathe-cli.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "63b79abc27f3bd58aecb6cc66c9bdfabbd2d8ad4c1feeda2557931afcf8db151"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1f6d288197e5d77c871c778f161ab141322b091ae82a634b8385c24b51c30f38"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1f6d288197e5d77c871c778f161ab141322b091ae82a634b8385c24b51c30f38"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1f6d288197e5d77c871c778f161ab141322b091ae82a634b8385c24b51c30f38"
+    sha256 cellar: :any_skip_relocation, sequoia:       "3930173b94413378e4bae2aa51ba55257743384376487f8e45b8b95fd6bdebd5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3930173b94413378e4bae2aa51ba55257743384376487f8e45b8b95fd6bdebd5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3930173b94413378e4bae2aa51ba55257743384376487f8e45b8b95fd6bdebd5"
   end
 
   depends_on "python@3.13"

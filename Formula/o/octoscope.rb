@@ -1,18 +1,18 @@
 class Octoscope < Formula
   desc "Terminal dashboard for your GitHub account"
   homepage "https://github.com/gfazioli/octoscope"
-  url "https://github.com/gfazioli/octoscope/archive/refs/tags/v0.28.0.tar.gz"
-  sha256 "7b50f8379b8a49857c1ad6e2579e2d8da2ee3a33e91d84f06fe688d70d448301"
+  url "https://github.com/gfazioli/octoscope/archive/refs/tags/v0.31.0.tar.gz"
+  sha256 "1f2f50fc953ba88eceb5e93fd512e82cb459d835b4d4e92ed4bb094ce383d52d"
   license "MIT"
   head "https://github.com/gfazioli/octoscope.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "54b9b8dada8d7d1eb02f5a8b08906008df24cf222c92034ab126bfd27ab8e6cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "54b9b8dada8d7d1eb02f5a8b08906008df24cf222c92034ab126bfd27ab8e6cb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "54b9b8dada8d7d1eb02f5a8b08906008df24cf222c92034ab126bfd27ab8e6cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0716af0d686a7022c42323561a23954689368305142cc037edbdc5e4f3fa5312"
-    sha256 cellar: :any,                 x86_64_linux:  "92ea8be30a359f11f95c74a768653eb7f54a0734d470acf645bdfd572940c388"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a1013b6834ed19053f9194e865e56ab9cb33b4ff05faf0696d46ddb8fac5f265"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a1013b6834ed19053f9194e865e56ab9cb33b4ff05faf0696d46ddb8fac5f265"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a1013b6834ed19053f9194e865e56ab9cb33b4ff05faf0696d46ddb8fac5f265"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fc3ecce8c6805c0d0f4e86f61ed603dda1c5af44c6dffc2807be61265654972f"
+    sha256 cellar: :any,                 x86_64_linux:  "6aa07b53d9481d7084f0908a19e9be5ac1b5a26fc034b0b419f24ac83b8fa61e"
   end
 
   depends_on "go" => :build

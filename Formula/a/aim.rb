@@ -1,19 +1,18 @@
 class Aim < Formula
   desc "Command-line download/upload tool with resume"
   homepage "https://github.com/mihaigalos/aim"
-  url "https://github.com/mihaigalos/aim/archive/refs/tags/1.8.8.tar.gz"
-  sha256 "5500e38e48e381557847d09e42dbb093e1e402eb2c2965929cbcdae69ce9ec9e"
+  url "https://github.com/mihaigalos/aim/archive/refs/tags/1.9.0.tar.gz"
+  sha256 "66b24fe3194f9538465b47c9f303e2b787e46490582e16442ef550245dbc75d6"
   license "MIT"
   head "https://github.com/mihaigalos/aim.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cf0cf71ebf3bcb9712333e8778d0fb8630ce6835f6202dda5f5a28ecec7e7227"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4ac5ce1cace76b95765ede24599206b3797ed6e8206b87d1ea265f47e49bed22"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "484268f126cf8d806192fa37fb6d323c0fd9b10577fd8580850a1b8d1a03c52c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2a0c89556898916f1615118e3f1bdbbf1d1393e60a17dd3698537ded3feacb57"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1de00db98b18fd340f83e9f623f3187890c59a965bf1cd4fe0ad2f17da0fdec3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "926ee46eff352e89e401ba7b4fe4cf1735b0326e05b95c76b36b6ab055e71723"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7687a76ebb7ebf9699e3aa48abd758975fcfc360a6253723052b8f13084741e5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ee2c7aeadcaa62e6fc18188f328dd3cdbd15deb1f2f76230e89af992d919dd3a"
+    sha256 cellar: :any,                 arm64_linux:   "d72b0c1440ac90576991d37b4c91e32b87bbd0b7a4165234360584c6d8551cce"
+    sha256 cellar: :any,                 x86_64_linux:  "522836e951d283effae7d062eb52f6a79ff598f95e0b2559f43ea0d6332b3dd3"
   end
 
   depends_on "pkgconf" => :build

@@ -1,17 +1,17 @@
 class Zigfetch < Formula
   desc "Minimal neofetch/fastfetch like system information tool"
   homepage "https://github.com/utox39/zigfetch"
-  url "https://github.com/utox39/zigfetch/archive/refs/tags/v0.27.2.tar.gz"
-  sha256 "b60567ea9011fcafe71c0756257cda76285eb25cdefb1800e29108e93638da74"
+  url "https://github.com/utox39/zigfetch/archive/refs/tags/v0.29.0.tar.gz"
+  sha256 "d111fe2b478cfb7bfe4a9ecdfe68c9efc381b1adb6947efa629463435a8f6fea"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256               arm64_tahoe:   "fbea921de8575ce034f5b741dee6c33854a245725421ab8c4e62078a4ae3d2fd"
-    sha256               arm64_sequoia: "1d7dca5c2c0b7c3d5bb22c62893f30b14f012ca3669d66848cd15a2aa52fd263"
-    sha256               arm64_sonoma:  "ddb5e048407b17a760df9f50e2aa2988580d7f24de6df0b019ed512ada2d80ca"
-    sha256 cellar: :any, arm64_linux:   "2b496bf855875fb8b0396e99d8af8702faa24ff2df50aca2eaeb89066b32fa68"
-    sha256 cellar: :any, x86_64_linux:  "440207a10708e4c3f279825ad7f644f7e322ff66efa28374313e3d3893e2492a"
+    sha256               arm64_tahoe:   "03f2dea90c04fbf085a9a0c56c52658bc4809918ac3ad88de19f4966174bc1f9"
+    sha256               arm64_sequoia: "9f26056e2fae6bdefb091d8a06def4e1a59a5875e47ccec182c19fab9c419711"
+    sha256               arm64_sonoma:  "173c57761bfeca57a7f0f401bd847bfefd3e1254f16c1c877f73b557d903171c"
+    sha256 cellar: :any, arm64_linux:   "b1da234f0df2d08e7e1bf062bf81703724b3a2074eafb538571aa2bab1b57cc6"
+    sha256 cellar: :any, x86_64_linux:  "0c79852597abec359ef7651a1ededdb8df1d6ecf762b86777e0071151537d826"
   end
 
   depends_on "pkgconf" => :build

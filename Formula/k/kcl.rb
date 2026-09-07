@@ -1,18 +1,18 @@
 class Kcl < Formula
   desc "CLI for the KCL programming language"
   homepage "https://github.com/kcl-lang/cli"
-  url "https://github.com/kcl-lang/cli/archive/refs/tags/v0.12.8.tar.gz"
-  sha256 "1781484d6d1667feeeadb2cb2bdb9c6baa1fde83c97c498cfbb92381fbd48d43"
+  url "https://github.com/kcl-lang/cli/archive/refs/tags/v0.12.10.tar.gz"
+  sha256 "cf06ef38bc01613b8b597fa8957d29e05a149a9d7532c5e4d56d14acb25aa8b0"
   license "Apache-2.0"
   head "https://github.com/kcl-lang/cli.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b83aefd9fb2d1101a64fcfbd673ce4cbc0dc1d95831fc330f843eaf1bbd93c31"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b1cbcea0c07db3ae768fb79a9594d965c38630fd091f8d2bff927747b425907"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "049233c7d54a1fec9eb9b10eae9fc2b6c7ddcf2e107ec8d485d920c5f9c18df4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a010e298912ceb3309c52334903910d6966b54a7c97375fff3c6699f42a977c5"
-    sha256 cellar: :any,                 x86_64_linux:  "daaf573d3df19686f31fd9632a59cd46bde452f87cfc25808e37e1ea30822b68"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f1a9f01442f072fe41508fb951c21bf61745e0ed2c9aceef0dccd8e051f18b9a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc6f74506f2a4c9f28c944b31b03e9a1e2ac8abf76ac6ab80dccfad9ccd70143"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1e0dc37893dafc8dddc7d145bf0c9fa464bae56b0d77d8e1d1f1157eccb3ef9c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "67d681e080a79d044cada3989a036afb4bf48a77c715f615ce8614f4632a8613"
+    sha256 cellar: :any,                 x86_64_linux:  "af9a219ffafa6c23df360649b53cefaba6a4116928194e9751ee199f08c6c9e5"
   end
 
   depends_on "go" => :build

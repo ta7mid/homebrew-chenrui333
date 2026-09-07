@@ -1,13 +1,13 @@
 class BraveSearchMcpServer < Formula
   desc "MCP server for Brave Search"
   homepage "https://github.com/brave/brave-search-mcp-server"
-  url "https://registry.npmjs.org/@brave/brave-search-mcp-server/-/brave-search-mcp-server-2.1.0.tgz"
-  sha256 "34487d20ff765f0ad9ae9116b05e1305bed8ef1acb5840a04cde8d43bb4a7528"
+  url "https://registry.npmjs.org/@brave/brave-search-mcp-server/-/brave-search-mcp-server-2.1.3.tgz"
+  sha256 "9dce3cd313a7f51f0cd4890e80a606fd1a39f6b868cbe5f1d9104ad7a5f70aac"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, all: "86fc6444b9dde2d2ff1a25a0fd794d30dd108bd456b19f8fa380f3b6b9e5e4da"
+    sha256 cellar: :any_skip_relocation, all: "5f7daf8768cb842b212d29f6e5c312545c5661a065fc3605fe58965546673a5c"
   end
 
   depends_on "node"

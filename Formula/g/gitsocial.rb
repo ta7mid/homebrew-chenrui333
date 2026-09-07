@@ -1,18 +1,18 @@
 class Gitsocial < Formula
   desc "Git-native cross-forge collaboration platform"
   homepage "https://github.com/gitsocial-org/gitsocial"
-  url "https://github.com/gitsocial-org/gitsocial/archive/refs/tags/v0.19.1.tar.gz"
-  sha256 "cad975da9a0f47c7db35e04854c1a7a455eadb6a16d02412a9a819c6d77c0728"
+  url "https://github.com/gitsocial-org/gitsocial/archive/refs/tags/v0.22.0.tar.gz"
+  sha256 "e220cda0c52aa00030e5b8105b726b5cba17979120a359d5808619203190cfc3"
   license "MIT"
   head "https://github.com/gitsocial-org/gitsocial.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "efcd8380b8409276e3c88784b477b899b8d1f94a215ec42c847f78578d21bff5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "efcd8380b8409276e3c88784b477b899b8d1f94a215ec42c847f78578d21bff5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "efcd8380b8409276e3c88784b477b899b8d1f94a215ec42c847f78578d21bff5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "26a6690b7d7f74120de226d091b5f76d760804a786e1d418ecc0f908dd2d91e8"
-    sha256 cellar: :any,                 x86_64_linux:  "d56eb4a68be3db57b1915755b7501ad591c5751e70b0156756928baa2ec5ca5e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e5f7c033d020e6f67464b83f946f18bd94790384baf3eca1bc3969c21f5aea25"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e5f7c033d020e6f67464b83f946f18bd94790384baf3eca1bc3969c21f5aea25"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e5f7c033d020e6f67464b83f946f18bd94790384baf3eca1bc3969c21f5aea25"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d0b9914ea3a39c7829187056c6873f0b30b814ee0ec0c1502c9706303b69eab3"
+    sha256 cellar: :any,                 x86_64_linux:  "1ab84a696ada13b7228bb89fdfb037d18f44b57043d585399c95d9edf37691d2"
   end
 
   depends_on "go" => :build

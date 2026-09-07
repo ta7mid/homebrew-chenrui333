@@ -1,17 +1,17 @@
 class Hapi < Formula
   desc "Agentic coding - access coding agent anywhere"
   homepage "https://github.com/tiann/hapi"
-  url "https://registry.npmjs.org/@twsxtd/hapi/-/hapi-0.26.0.tgz"
-  sha256 "3da08185597a904ee7378897ca646e64b2a1b3b264aa06890a3cd018ee846d2b"
+  url "https://registry.npmjs.org/@twsxtd/hapi/-/hapi-0.29.0.tgz"
+  sha256 "d5e59110d6fa217f945148d6f773f30810974afc9da57092dc01757eda280e92"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256                               arm64_tahoe:   "aaa788bf7528d9b14b8d610d407b5d710d2fcfd58570a35bdf66ad9238cd71cf"
-    sha256                               arm64_sequoia: "aaa788bf7528d9b14b8d610d407b5d710d2fcfd58570a35bdf66ad9238cd71cf"
-    sha256                               arm64_sonoma:  "aaa788bf7528d9b14b8d610d407b5d710d2fcfd58570a35bdf66ad9238cd71cf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "636c2f1eff7cafa0154f02ed40c0bc3e2dc7f11f837ad43a6874d87a54c8272c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2c323369738e49c42051a9a94d173e67591634c83ca31d3b9465e7ccaeff8de"
+    sha256                               arm64_tahoe:   "dae8f85d7c6afc56a584edea1399a72161d7ed27bc5ba9d1b27ac791fe69f123"
+    sha256                               arm64_sequoia: "dae8f85d7c6afc56a584edea1399a72161d7ed27bc5ba9d1b27ac791fe69f123"
+    sha256                               arm64_sonoma:  "dae8f85d7c6afc56a584edea1399a72161d7ed27bc5ba9d1b27ac791fe69f123"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3e77d32405acfb624e11e84411aa13457bdfa6cec07aec44f33341261b9ab5c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c6edf45f758242a6d73dade0dd8636abe1f8a34b42c29af92832eb4c83a8bac"
   end
 
   depends_on "node"

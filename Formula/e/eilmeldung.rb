@@ -1,18 +1,18 @@
 class Eilmeldung < Formula
   desc "Feature-rich TUI RSS reader"
   homepage "https://github.com/christo-auer/eilmeldung"
-  url "https://github.com/christo-auer/eilmeldung/archive/refs/tags/1.7.1.tar.gz"
-  sha256 "b4d19c0d4eb3e3f44a04e4cb0e54f714f391f7a2bd85ea9a5284b04108e9a134"
+  url "https://github.com/christo-auer/eilmeldung/archive/refs/tags/1.8.1.tar.gz"
+  sha256 "c1d1a6248ed1f5a2e1b924f2db1653d1a045de69af4ebbd0ebf1a58b0d3a8e9a"
   license "GPL-3.0-or-later"
   head "https://github.com/christo-auer/eilmeldung.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256               arm64_tahoe:   "00f1891e97e281259d0e124a4d8e7a9bfad014a08c8fbfea30884d0c0acd6fe5"
-    sha256               arm64_sequoia: "fcac3cc47811bc7b0e2dcd2667d9245393dda5abb9af0b3875f1597fbe7c7a23"
-    sha256               arm64_sonoma:  "dfe3c93923acd07ee30eb8e97bfbfbb22ca60bf6b439f55e3e89f5a835b2cc8d"
-    sha256 cellar: :any, arm64_linux:   "567cfe64c5ae705dffc2c84c5a80b45f297861c4d97000505f299328ee88e8a5"
-    sha256 cellar: :any, x86_64_linux:  "446941fdbc4dc1c4bf5aeba83b2b10554140d5081f1a068ce116471ca0ea1222"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "746720122a3cd127699d50bf2d70176748eb46e00db703a85d29375d2668b5f3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "04cb9d556981da14cbb0961789633372d355361c4a00dc307414410d0baa9aac"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "60e6aa837e2321c75d69179e24a8ceedb532efb601f8cf8c2885d4155e8a05fc"
+    sha256 cellar: :any,                 arm64_linux:   "9f8470a2431a1f8e62346577bd1babb444689f090dc919a2a927b01e2d095b75"
+    sha256 cellar: :any,                 x86_64_linux:  "1ec9f8a3fc1785a03ab803fb13079ce290efb901932bf4b1dd17a91bb974f7ad"
   end
 
   depends_on "pkgconf" => :build

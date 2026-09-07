@@ -1,18 +1,18 @@
 class Sidecar < Formula
   desc "Terminal UI for diffs, file trees, conversation history, and tasks"
   homepage "https://github.com/marcus/sidecar"
-  url "https://github.com/marcus/sidecar/archive/refs/tags/v0.91.0.tar.gz"
-  sha256 "e7de1a94ac56e50e6c26339b6424113bd7ee7a35539fe457fd72483a520402f9"
+  url "https://github.com/marcus/sidecar/archive/refs/tags/v1.13.0.tar.gz"
+  sha256 "4495aff770abd7092947d5557cec971361cb777ad3f13286b9dd3118c74753f9"
   license "MIT"
   head "https://github.com/marcus/sidecar.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "69640ab1914c48c977664bc43ca2ce993596776b273830a25936ba56b0916e35"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "253fcf0a19199c6dabd30def5a8d0b41f747b61aaa68d5e51ac99cc310f659b3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f4a90432777ea20cf4faf888d77c06d8858507566aeb03fc9a45cf375d2d1973"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7644330d9c2e3ddaf943cb0adc1fe0a2d6e3cc29960c04ae1dbc3d68b51fb9d6"
-    sha256 cellar: :any,                 x86_64_linux:  "22b022cfffeba25bb98b60c90cb0445878bb92220eed2975ac37c4068fc5708c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2d875a53468b9e28e19413e434931f3e6144b7091be086dd4acd0702931de4c0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "557a7f16f8315979b3c11deec1707d10929221a39ba058835cd5b19006704471"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "de761e56a9fd51ef87d935feccfa6fe58ad60c490bf3bfadbc101259f9d25b81"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b42db0f006a9b5a6feae7db07e1b55ed882d2dd3c4082294e1b98405a92c07c1"
+    sha256 cellar: :any,                 x86_64_linux:  "9047a46fbf1ac1eaf611cf1db8ca30900295a033a65302ce1a2a92be12c15b42"
   end
 
   depends_on "go" => :build
@@ -25,7 +25,7 @@ class Sidecar < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/sidecar --version")
-    assert_match "sidecar requires an interactive terminal",
+    assert_match "Sidecar requires an interactive terminal",
                  shell_output("#{bin}/sidecar --project #{testpath} 2>&1", 1)
   end
 end

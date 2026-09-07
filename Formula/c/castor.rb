@@ -1,20 +1,21 @@
 class Castor < Formula
   desc "DX-oriented task runner and command launcher built in PHP"
   homepage "https://castor.jolicode.com/"
-  url "https://github.com/jolicode/castor/archive/refs/tags/v1.6.1.tar.gz"
-  sha256 "55147f5fc167b3ee272294d0f4fdb09046bf2de420f8ef62962f63cfed2ffeb5"
+  url "https://github.com/jolicode/castor/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "e1bf8848cb01ba96d5229fd48ec6621167edf79a851c8c9ecf9e3ce82e234d0b"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c2aec53bbbe1b38b7b0576490178445071a8d8a0261df245fc183b0997df36b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c2aec53bbbe1b38b7b0576490178445071a8d8a0261df245fc183b0997df36b4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c2aec53bbbe1b38b7b0576490178445071a8d8a0261df245fc183b0997df36b4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "41cd345a850f11a26ee3bc91d0c3c2076f9e0eb66e8507ef3ad6ad02f849b1df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4fc4934d530578bad4b33330d7ca09926b2622be4eed5ae64d3f8ed06bbcb3e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1886b533b154c6ff571b0b0e516d4eae63452c1d9f4c691d3a93d0119fa807f1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19673633fd55e721abceaa5da1fd5b530f81844d3744a787f6df04575770648e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5123cbd9803ce1ef90700e17eaa34f48e2a54bf8899e27b02c99e931bf03de85"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ad92f3023ef231b903f782ea8ef5e97a6567c653306f1f73fea2731ef51ace9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c52690487ac1a36c9b6a2cef71f9fc390bbb683108a1efc3776d3d5fe6e9fb70"
   end
 
   depends_on "composer" => :build
+  depends_on "go" => :build
   depends_on "php"
 
   def install
@@ -28,12 +29,12 @@ class Castor < Formula
     EOS
     chmod 0755, bin/"castor"
 
-    # remove non-native watcher
+    # Build the native watcher from source instead of installing upstream prebuilt binaries.
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
-
-    (libexec/"tools/watcher/bin").children.each do |file|
-      rm(file) if file.basename.to_s != "watcher-#{os}-#{arch}"
+    cd libexec/"tools/watcher" do
+      rm_r "bin"
+      system "go", "build", *std_go_args(output: "bin/watcher-#{os}-#{arch}", ldflags: "-s -w"), "main.go"
     end
   end
 

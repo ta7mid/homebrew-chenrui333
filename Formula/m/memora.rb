@@ -3,18 +3,18 @@ class Memora < Formula
 
   desc "Lightweight MCP server for semantic memory storage"
   homepage "https://github.com/agentic-mcp-tools/memora"
-  url "https://github.com/agentic-mcp-tools/memora/archive/refs/tags/v0.2.29.tar.gz"
-  sha256 "0244ac7776d133610dedad9f5f9b755913fd9be014740e0f378cd4aced806993"
+  url "https://github.com/agentic-mcp-tools/memora/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "ed65f741accc854371788897b5650932ddb6f5a78c88a5b638dd79925b5a4571"
   license "MIT"
   head "https://github.com/agentic-mcp-tools/memora.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any,                 arm64_tahoe:   "f3c6f4bce7258e4c5c7ed4f3d002a656e89f1dd0af6e9ecb8842cb40198f4a12"
-    sha256 cellar: :any,                 arm64_sequoia: "b561962d8f9569d49bd40b20162b2fc254c195564dfa73854c897d6fa9be20d2"
-    sha256 cellar: :any,                 arm64_sonoma:  "7b82cc12b6d94050e02b6239b6af626baff5077e0c00eaec1f8f273772723ab8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4fd4516bf11597486c949fbd5dc388180a41f4bf37a47d3590b47cb572a27d66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "88580230dfa1270d9a13ab34321e33955aa9d2452adce5ef7fe6af543d27473e"
+    sha256 cellar: :any, arm64_tahoe:   "f7f3fef881865049e3efe6323c84a5609e7eb2e9ed89507c244469a2b343545c"
+    sha256 cellar: :any, arm64_sequoia: "2aef34e3c9faa0c6c5089ccf5687bf4eed8f9d192ee676a5cea53ad97954a723"
+    sha256 cellar: :any, arm64_sonoma:  "8848081801c85bf92239b98ff247d519cb84ad90863eb6c39db07205f05edecb"
+    sha256 cellar: :any, arm64_linux:   "522b38c9d0cbb1a53d0d1504414325f745fe676321fea2a6fb9cbc82d7db64d2"
+    sha256 cellar: :any, x86_64_linux:  "879679c895d8cf3461be8347866043424a1042ddfd782ea73d5ebeb6993f06c7"
   end
 
   depends_on "pkgconf" => :build

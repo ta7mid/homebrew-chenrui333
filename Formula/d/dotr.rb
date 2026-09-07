@@ -1,18 +1,18 @@
 class Dotr < Formula
   desc "Dotfiles manager that is as dear as a daughter"
   homepage "https://github.com/uroybd/DotR"
-  url "https://github.com/uroybd/DotR/archive/refs/tags/v2.1.1.tar.gz"
-  sha256 "1d2698fd96e6a9390a19a720350f6922bec84d80b1105b35d7eb53d1cf6a4e0e"
+  url "https://github.com/uroybd/DotR/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "49b841077fc81b1f0bf1a3d24cb3cbe215df575afd54da7ed698a7eb1aab773e"
   license "MIT"
   head "https://github.com/uroybd/DotR.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9636671add37d49857eb3b81af66cc72cc3218235a0559f8977fd8d9d5028313"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1caaace9aed7964f574b3bc77f59376e40b227c03140fd7596073a835d1fd3c9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d338c939349c6f715b1faa8bd4ddc11ccc1691c11c70921c0a3c1ad7e1f5ceb0"
-    sha256 cellar: :any,                 arm64_linux:   "70b246e99b570b9f5e3e6643daf23127fff0b935e9e81d6ca4790dad60e0a45c"
-    sha256 cellar: :any,                 x86_64_linux:  "2f11b5f12c851872c47c7665edd616a72326bf077bc4f2f9c4f8942d6961972c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "062b52745cfd02c4ca5b1fe736be4b2f37c57e261286100c4e165424b28d2831"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8c71aa8af08e7a8b6b579e4edd689af0627d7b588db9bda8db207907e5375fad"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b98589eefbb0b2d22e9fc6323bf9c3a39c05d7ae78d8d3d58cceeb6972a73e99"
+    sha256 cellar: :any,                 arm64_linux:   "06c882f1b6f4f6a8c712edcdf8e40c743ccd45fe06bffe42c755a8261c67e721"
+    sha256 cellar: :any,                 x86_64_linux:  "7171b250ff262291bf4f20816994eeffb281ed870502b71919080d4654727c81"
   end
 
   depends_on "rust" => :build

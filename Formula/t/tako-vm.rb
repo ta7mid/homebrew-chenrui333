@@ -3,18 +3,18 @@ class TakoVm < Formula
 
   desc "Secure Python code execution in isolated Docker containers"
   homepage "https://github.com/las7/TakoVM"
-  url "https://github.com/las7/TakoVM/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "7c5e1e66358a2763dd35385598d74a408a95d29f29aad3585c4e3e1814466bc8"
+  url "https://github.com/las7/TakoVM/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "9175da013d27e4f86d7f89fcb03add94b3c7dc3a9cacd8e3338c55f6603ba0ca"
   license "Apache-2.0"
   head "https://github.com/las7/TakoVM.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e4149e50c403dfa1b0f7afd51e7b6843ffb4e10f4e80ac5c9ad2bbd4f81243a4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dc4b6da95b1637c5582a36716ea18772e39ac6b42b08a03951561710a65064ec"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f5726e0e2c840d166c04115ee5f08f720ef973b6cfcbd3dc9b110b4f39b9c3dc"
-    sha256 cellar: :any,                 arm64_linux:   "d0c4c62192b7ae25fb3362a216d7aaea85e9a45334657d03177acbb0c6aace62"
-    sha256 cellar: :any,                 x86_64_linux:  "b24d43d027b39b921cb83b6bd199b4c7d406f9161b9bad3e45ed2188d9788a3b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "406f4bc20d396272b5b549a6fc2286023ae9d37fcf92d12ff1871b7a66ef08c7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "759ff3ceb56ec257d407b80f61509ebd219f1bb58e4b3db783760dcbe39ba9bf"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0d5096c47447f368f68d67cb53e271cd2edcf96706230236ada3e88e89ac4522"
+    sha256 cellar: :any,                 arm64_linux:   "23e89f324075f5c798ab3dc206a41492173b4d8be729852cc7a772fbc0ccb70c"
+    sha256 cellar: :any,                 x86_64_linux:  "216917714fdd6d0b572c0e558eacd5af146318901988da870937a949e5253ee5"
   end
 
   depends_on "certifi" => :no_linkage

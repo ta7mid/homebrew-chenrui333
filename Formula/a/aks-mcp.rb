@@ -1,18 +1,18 @@
 class AksMcp < Formula
   desc "MCP server for Azure Kubernetes Service (AKS)"
   homepage "https://github.com/Azure/aks-mcp"
-  url "https://github.com/Azure/aks-mcp/archive/refs/tags/v0.0.19.tar.gz"
-  sha256 "5fc1ba7497cd6985a9146a85b1bd38e3bfd431518587debf3211e5d80e300928"
+  url "https://github.com/Azure/aks-mcp/archive/refs/tags/v0.0.20.tar.gz"
+  sha256 "80b5ba895cb70c2fa71e6f1f10da81c887943d3cddedcd0b2e6ecc05752db34d"
   license "MIT"
   head "https://github.com/Azure/aks-mcp.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f0ca591c547cf455247aecb41d2dcd7ce1a572d20e43920af38a95b9140a1d11"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f0ca591c547cf455247aecb41d2dcd7ce1a572d20e43920af38a95b9140a1d11"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f0ca591c547cf455247aecb41d2dcd7ce1a572d20e43920af38a95b9140a1d11"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "93a6215aba3878ede56d5fd4d9bd6bf543dee113c5e11dca2f11fa0d9970b934"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "625655dcf16e9cb6562240c8fa10370d5c6e88e18048b1f543194b8f0c702528"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "462f95e0afd01e8e34833835a5748cc9a7ff5170f5604f3750ca8049e6063943"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "462f95e0afd01e8e34833835a5748cc9a7ff5170f5604f3750ca8049e6063943"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "462f95e0afd01e8e34833835a5748cc9a7ff5170f5604f3750ca8049e6063943"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0a5840ff85abb4ff32d7bf2d42e2f167c25b28e2b7f6f9d067e2e621ac942f50"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73408f281794e0deac059f8c33a9da162ed0fc3f2d907eaaec16b8f44333792a"
   end
 
   depends_on "go" => :build

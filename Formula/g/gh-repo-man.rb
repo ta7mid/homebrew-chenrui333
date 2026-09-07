@@ -1,18 +1,18 @@
 class GhRepoMan < Formula
   desc "Manage GitHub repositories interactively from the terminal"
   homepage "https://github.com/2KAbhishek/gh-repo-man"
-  url "https://github.com/2KAbhishek/gh-repo-man/archive/refs/tags/v1.1.tar.gz"
-  sha256 "4a5ec096ddba52f1062ea1aa746f6fa5f4c8d289922c5718ad23ac3368715d86"
+  url "https://github.com/2KAbhishek/gh-repo-man/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "beb52c99fb100344c81bd0ee7272b1f92e71458e4dbd1cc7e90c3f77843bbab3"
   license "MIT"
   head "https://github.com/2KAbhishek/gh-repo-man.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8c3ad69145fa5e8713fde0ce0782d0ef900c26579fe87ad48a8e35b7a477f72c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8c3ad69145fa5e8713fde0ce0782d0ef900c26579fe87ad48a8e35b7a477f72c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8c3ad69145fa5e8713fde0ce0782d0ef900c26579fe87ad48a8e35b7a477f72c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b164db103a3d7573712c9c9afa3294b0be5ea117064b4aaa082c0362364295eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e412366157a8401b81b6fc71e02198107e9044dc14241a1a8f980f213c3109cf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9aabb592596ab7807de05052a430af2cabd9cd70aa17028b36b44f8b6197dd3c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9aabb592596ab7807de05052a430af2cabd9cd70aa17028b36b44f8b6197dd3c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9aabb592596ab7807de05052a430af2cabd9cd70aa17028b36b44f8b6197dd3c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "15ca565da4a192380b5b779cdd0c3a7a76dd73816590d589307a7dd26cb0b366"
+    sha256 cellar: :any,                 x86_64_linux:  "f41ad972282f3465dcef7fd82dc1e6b7aaee53ef838c1af4bb90ab5d24f04988"
   end
 
   depends_on "go" => :build

@@ -3,26 +3,36 @@ class Ministack < Formula
 
   desc "Local AWS service emulator and LocalStack replacement"
   homepage "https://github.com/ministackorg/ministack"
-  url "https://files.pythonhosted.org/packages/cc/71/7e3817fd02aa0451d01a582b91de922b60253a2edbe680ac21f3734175bb/ministack-1.4.11.tar.gz"
-  sha256 "1fbadf94bd3cbe3c476b46a77033d3864a0e1c81252b1a1d5430db40928f15b7"
+  url "https://files.pythonhosted.org/packages/d4/f0/f2e58a3e1502a0949cd02e358d9de5b9fed4549f9aafe98cb819c6f7b341/ministack-1.5.8.tar.gz"
+  sha256 "615b29041e5dedd3b506a7614dbd428a1842badcfcfe62e3d8f9059682a5840d"
   license "MIT"
   head "https://github.com/ministackorg/ministack.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ff956f1d504d4a0a885d4552808c770922367567da80e18917758d6a050a4070"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fe2c2ee296841fb992a9053c5f140b5f7cd60972018ee3b0ed2e1b279912debd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d4838b3ed04505b6834748c9019d4b309c39f914de4533f24b8cc55a59368942"
-    sha256 cellar: :any,                 arm64_linux:   "76492ef66fe15e8aa087235679e1ad4416984874bf45436dcd5fe822b278cbc5"
-    sha256 cellar: :any,                 x86_64_linux:  "fbb0be74dee1918980e1d2fd8429c331b08e35104fbf298109cd2fe5f98bf26f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ed9c404635e9da8d31c21bf2f91fe5af3a8036f97016970c0c3b0cfa442f2a19"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f8c9fd403b6d390463e8ef107e91f22f13c6f4461d5be7350d80a4e29337d696"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7eb7cf21fced63289d60b2a27125d306d20b3e7a0583b1c077bbb11af70cece1"
+    sha256 cellar: :any,                 arm64_linux:   "ed1fb762dc5e5fd8a2026c3cd07cb9a07f268de901b387ce8cc773a8bbd37827"
+    sha256 cellar: :any,                 x86_64_linux:  "e02d0f04c88b08c885f2db7fe388fc33d75a6a648f22686af1ab9bd1269dd187"
   end
 
   depends_on "libyaml"
   depends_on "python@3.14"
 
+  resource "botocore" do
+    url "https://files.pythonhosted.org/packages/e1/5f/b33913aab846bc88a2720976435adb944d1ef57b92beed829233fe1953d9/botocore-1.43.63.tar.gz"
+    sha256 "854e45247f00b0732496ea1f0c5d0cf3c31d58b48eb052c31c27ab1087dfddf1"
+  end
+
   resource "defusedxml" do
     url "https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz"
     sha256 "1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"
+  end
+
+  resource "graphql-core" do
+    url "https://files.pythonhosted.org/packages/11/7f/671c1046fe72ba5b62be2de3979ea9e61cb3dba8f1edfb880b811f8bdf8b/graphql_core-3.2.12.tar.gz"
+    sha256 "4579094d5fc8a1a59555a9b18e51b320779d9bbc63e2302c519af0c4919d9543"
   end
 
   resource "h11" do
@@ -50,14 +60,39 @@ class Ministack < Formula
     sha256 "f630908a00854a7adeabd6382b43923a4c4cd4b821fcb527e6ab9e15382a3b08"
   end
 
+  resource "jmespath" do
+    url "https://files.pythonhosted.org/packages/d3/59/322338183ecda247fb5d1763a6cbe46eff7222eaeebafd9fa65d4bf5cb11/jmespath-1.1.0.tar.gz"
+    sha256 "472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d"
+  end
+
+  resource "jsonata-python" do
+    url "https://files.pythonhosted.org/packages/9d/6a/b756e10939f584b0629c301bb4aa0e79f94163ac3b0083c788b8ee78c708/jsonata_python-0.7.0.tar.gz"
+    sha256 "2cf788147a0d444cb9d7d81c58da9991607280d6a5d0f06bd2dd212a59fdcb16"
+  end
+
   resource "priority" do
     url "https://files.pythonhosted.org/packages/f5/3c/eb7c35f4dcede96fca1842dac5f4f5d15511aa4b52f3a961219e68ae9204/priority-2.0.0.tar.gz"
     sha256 "c965d54f1b8d0d0b19479db3924c7c36cf672dbf2aec92d43fbdaf4492ba18c0"
   end
 
+  resource "python-dateutil" do
+    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
+    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+  end
+
   resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
     sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
+    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+  end
+
+  resource "urllib3" do
+    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
+    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
   end
 
   resource "wsproto" do

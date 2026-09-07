@@ -1,18 +1,18 @@
 class Diffcat < Formula
   desc "TUI for visualizing git diffs"
   homepage "https://github.com/trebaud/diffcat"
-  url "https://github.com/trebaud/diffcat/archive/refs/tags/v0.16.2.tar.gz"
-  sha256 "df9daaee935c31cb89b64437121d8acb80d0f2d08f2dbb6e732cabf7106bde72"
+  url "https://github.com/trebaud/diffcat/archive/refs/tags/v0.18.0.tar.gz"
+  sha256 "86dad8196d711478c0cc1d1ddc2d66310b07c5b273c25afb17119d6ea3b66f3a"
   license "MIT"
   head "https://github.com/trebaud/diffcat.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "19493d06418e0d65a881d1eb7d9c96a1e39d2246a1b0b152afab9af2e39a3ba5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19493d06418e0d65a881d1eb7d9c96a1e39d2246a1b0b152afab9af2e39a3ba5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "19493d06418e0d65a881d1eb7d9c96a1e39d2246a1b0b152afab9af2e39a3ba5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9f68416759dfc47c6bad67a6e7482d40f912ac46c1c970d50ef6ca131bfd913"
-    sha256 cellar: :any,                 x86_64_linux:  "f9ea8552577d2185efce8839dddc149b25bb6462eb8422334bf00e74e93565b4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d228841ccb9660707757e6f638c962cbe6af53db3bc025b90ff744afcc3e4a97"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d228841ccb9660707757e6f638c962cbe6af53db3bc025b90ff744afcc3e4a97"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d228841ccb9660707757e6f638c962cbe6af53db3bc025b90ff744afcc3e4a97"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2dad803658c356c01d82ac6640c4cce4430e127602da7369898fd56f9488fc4"
+    sha256 cellar: :any,                 x86_64_linux:  "c0523740b7aee4b3740b9e86337e60441f859571073f6c61355425474b403144"
   end
 
   depends_on "go" => :build

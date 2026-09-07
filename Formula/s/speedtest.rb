@@ -1,17 +1,18 @@
 class Speedtest < Formula
   desc "Test Internet Speed using speedtest.net"
-  homepage "https://tenderly.co/"
-  url "https://github.com/showwin/speedtest-go/archive/refs/tags/v1.7.10.tar.gz"
-  sha256 "70a2937d0759820fe7ee8f61b960d60c07b34c0d783ed11c0065b68fe2964aea"
+  homepage "https://github.com/showwin/speedtest-go"
+  url "https://github.com/showwin/speedtest-go/archive/refs/tags/v1.8.3.tar.gz"
+  sha256 "48d01137468da9d419a3940a652803dafd8a6820abcd985b85c9d0c86b417ba3"
   license "MIT"
   head "https://github.com/showwin/speedtest-go.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b3b730850b330edf5f1f4ae8c77ef6b23eb08c5c696cb9658ddf1bc4b03c78c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "883b0e19be9f3471d577158bed2c21b803a63e278f9d0a7d4d47e77c7f270f7f"
-    sha256 cellar: :any_skip_relocation, ventura:       "1584f069f6901104bbb1d6c668ded91fb18d170ba45afe1f3bada3f19f7ea2fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6faac3aa52f6d2784f28d191edf3b17e6af9544ec5d6847b6ca196a2af1eaffd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3a309f6398bb9cdee00e340583ec466f6ae70ace93c75c2661a41e9db2cc2fa8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3a309f6398bb9cdee00e340583ec466f6ae70ace93c75c2661a41e9db2cc2fa8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3a309f6398bb9cdee00e340583ec466f6ae70ace93c75c2661a41e9db2cc2fa8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "92abd7a375abf1152655147e43c50c24becf9af39d9bb1da342cac63feb0f07b"
+    sha256 cellar: :any,                 x86_64_linux:  "f8ba22cc71bd97141c154d97d01b9a2ad2a8b0ba5e0adda9967d2aba39deacb4"
   end
 
   depends_on "go" => :build

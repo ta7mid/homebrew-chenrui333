@@ -1,18 +1,18 @@
 class Cull < Formula
   desc "Interactive TUI disk space analyzer"
   homepage "https://github.com/legostin/cull"
-  url "https://github.com/legostin/cull/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "e928c1f27bf2820d7fb5406b8d17316bf7804f6327c790635314cdcf2fbf939d"
+  url "https://github.com/legostin/cull/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "49f21de1a3503fac2f929b0bc40e117fe64c3b46325deddbe9c1340c585690fe"
   license "MIT"
   head "https://github.com/legostin/cull.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b904948635e6bcb37d624d61ad5766cc6f7866de8dfd95fc6f53b056d8526331"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b904948635e6bcb37d624d61ad5766cc6f7866de8dfd95fc6f53b056d8526331"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b904948635e6bcb37d624d61ad5766cc6f7866de8dfd95fc6f53b056d8526331"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5f0f4f871f1417202840d9bc35ec6cec120d878f8af2d286ef95078cdaa5a718"
-    sha256 cellar: :any,                 x86_64_linux:  "b81c33f5f028db52474529f3e0e2a200e4a021c1637d77e003c50d2d7a076448"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fba9615d043ade95a1cec546fbc058f4b880fe30f9455644480ac81fb4e1c1e5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fba9615d043ade95a1cec546fbc058f4b880fe30f9455644480ac81fb4e1c1e5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fba9615d043ade95a1cec546fbc058f4b880fe30f9455644480ac81fb4e1c1e5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b4ec9394d4ed1fed2bbb057e8049ffc9154e75601b697bf25979f73a20d9d172"
+    sha256 cellar: :any,                 x86_64_linux:  "be569ddb297786a5fd05ca786d16d7fb44437f5ff8583aa29293333a9eef537a"
   end
 
   depends_on "go" => :build

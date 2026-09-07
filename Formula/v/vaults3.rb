@@ -1,18 +1,18 @@
 class Vaults3 < Formula
   desc "Lightweight, S3-compatible object storage server with built-in web dashboard"
   homepage "https://github.com/Kodiqa-Solutions/VaultS3"
-  url "https://github.com/Kodiqa-Solutions/VaultS3/archive/refs/tags/v4.4.48.tar.gz"
-  sha256 "43dd114803f2f4a38dfc16cd7cd2a2995be9e9c35cfb0de83cda3126770972b1"
+  url "https://github.com/Kodiqa-Solutions/VaultS3/archive/refs/tags/v4.4.68.tar.gz"
+  sha256 "36b8764f7c68648306f0a234412429fa287680a8e3e1c1a7581d954619053733"
   license "AGPL-3.0-only"
   head "https://github.com/Kodiqa-Solutions/VaultS3.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "348967564c85c27bac9786bb216267874cbc132a6804c4a100594fd36f12a8f1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "348967564c85c27bac9786bb216267874cbc132a6804c4a100594fd36f12a8f1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "348967564c85c27bac9786bb216267874cbc132a6804c4a100594fd36f12a8f1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e04d261792899148009559e1429770d0986ff771a2106194799b1f3ddcba40b9"
-    sha256 cellar: :any,                 x86_64_linux:  "152f5d7baaed41658de6f7d67499eafd53341bd2de4de74de06f8459b6810ef9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ebe82e8f248013b26bbbbb04cc06e16c773388bc7fbdd57fbbfc581968e0067e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ebe82e8f248013b26bbbbb04cc06e16c773388bc7fbdd57fbbfc581968e0067e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ebe82e8f248013b26bbbbb04cc06e16c773388bc7fbdd57fbbfc581968e0067e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ae8b14d044b7a0dce94f32806717c0da7ac3fb98d09ab34b91e65ca9638fe635"
+    sha256 cellar: :any,                 x86_64_linux:  "357609515cd98af988c6e44c274d405b94000bee4aa016e9d68f07eb1744b88c"
   end
 
   depends_on "go" => :build

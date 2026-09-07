@@ -1,18 +1,18 @@
 class Octelium < Formula
   desc "Next-gen FOSS zero-trust platform—self-hosted VPN, ZTNA, API gateway & homelab"
   homepage "https://octelium.com/docs/octelium/latest/overview/intro"
-  url "https://github.com/octelium/octelium/archive/refs/tags/v0.38.0.tar.gz"
-  sha256 "9371cbe49964572669d57c50fa995101a5fbcd430eee06755594758c5557a248"
+  url "https://github.com/octelium/octelium/archive/refs/tags/v0.41.0.tar.gz"
+  sha256 "05e47cc7acfdaf99d6ac4161afeb8e0f703378b5ba46366080d7582ac4b42b62"
   license "Apache-2.0"
   head "https://github.com/octelium/octelium.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0d03bbedbebdba66a5864138cd8d99e3137734909c3eb49d8666e3c906463282"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0d03bbedbebdba66a5864138cd8d99e3137734909c3eb49d8666e3c906463282"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0d03bbedbebdba66a5864138cd8d99e3137734909c3eb49d8666e3c906463282"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5348f73d2d08cc2188aa4d01c3c5017e2314635a4c3876ee2a6bb5adad3ded8b"
-    sha256 cellar: :any,                 x86_64_linux:  "cecdaa201a564c32a722537e1fddb990f5166182ffb18f64bbfd0144b805fd35"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "364631d6b55342d7184d979c231312fc9d92b0ab6731d3c645399a3a3030119b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "364631d6b55342d7184d979c231312fc9d92b0ab6731d3c645399a3a3030119b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "364631d6b55342d7184d979c231312fc9d92b0ab6731d3c645399a3a3030119b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c197576369ddf5e8c929dbbffe927664b0b024c41d2360eccb18eefc937d4c9"
+    sha256 cellar: :any,                 x86_64_linux:  "ac324ac1c686bb6afd66d49371881e41d51bf9cb43f7dc628f7b9705e07fb543"
   end
 
   depends_on "go" => :build

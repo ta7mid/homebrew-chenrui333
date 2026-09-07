@@ -1,13 +1,13 @@
 class Epiq < Formula
   desc "Distributed terminal-native issue tracker backed by Git"
   homepage "https://github.com/ljtn/epiq"
-  url "https://registry.npmjs.org/epiq/-/epiq-1.3.0.tgz"
-  sha256 "7dbb2af7fb45324610ad7cf038f196391181d488b08841f4442120a3e0a14dc0"
+  url "https://registry.npmjs.org/epiq/-/epiq-1.8.1.tgz"
+  sha256 "f3a6ba48fae3264b0e8ac17fb7b4719afa9879fd424bdd60f6f147266c1546bd"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, all: "231c5ca5ad95a2bd2d0d0300f1e0b39f68c6ece033d1892bf0204dd0ce895882"
+    sha256 cellar: :any_skip_relocation, all: "390e871b0e71afd22f71911f3596e9e6a8b4e3754208d46223cdf71f30f8e519"
   end
 
   depends_on "node"

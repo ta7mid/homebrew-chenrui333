@@ -1,13 +1,13 @@
 class Taskonaut < Formula
   desc "Interactive CLI tool for exec into AWS ECS tasks"
   homepage "https://github.com/SchematicHQ/taskonaut"
-  url "https://registry.npmjs.org/@schematichq/taskonaut/-/taskonaut-1.10.5.tgz"
-  sha256 "7f6b11e48e648616b2fac07cd1851654f4339b5bf01c7598552bc284fc840437"
+  url "https://registry.npmjs.org/@schematichq/taskonaut/-/taskonaut-1.10.13.tgz"
+  sha256 "436b0abeac49e1828b23ca3bcf82962c76dc478152d012f1114f01bda1601ee5"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, all: "0a65aa97d8728a64492326d95e3a3f2e43ae6dc8b20f1a07307e5b0aa2ca110c"
+    sha256 cellar: :any_skip_relocation, all: "7f6d3ca466eb54b216252e26d73b0ab5e254314c3072bed5a4230292c2ecfeb1"
   end
 
   depends_on "node"

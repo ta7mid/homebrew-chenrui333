@@ -1,17 +1,17 @@
 class AppleHealthMcp < Formula
   desc "MCP server for Apple Health"
   homepage "https://github.com/neiltron/apple-health-mcp"
-  url "https://registry.npmjs.org/@neiltron/apple-health-mcp/-/apple-health-mcp-1.1.0.tgz"
-  sha256 "78949df6bc376b55f9e5615abfd74955c766b04dcd901c1028821b90219ee16a"
+  url "https://registry.npmjs.org/@neiltron/apple-health-mcp/-/apple-health-mcp-1.4.1.tgz"
+  sha256 "1eb0cc00105954b74f4106b978668482582d571a640279137075736449c75f93"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256               arm64_tahoe:   "a6433d36fd5e1ef9c33a9a592f8377b5e024a6d7bcf014ac3d9f78f4ad747674"
-    sha256               arm64_sequoia: "77201d15b11f1f712d51469dc2bc91e94e4de557acc5e66030a1fe85ec4dd30b"
-    sha256               arm64_sonoma:  "091f83308ddf830fe2f48fb2ab6f706d25564c02c32f2bee36e57cb5790c0924"
-    sha256 cellar: :any, arm64_linux:   "f90f2024837184e950cbfcd4d9d5ca30a95c4eeac77763c2140bc34619e072b9"
-    sha256 cellar: :any, x86_64_linux:  "7a4589bae7e6cd8ff9b3ceeb4cb48b4fbad5aafa835c477a2f8ac56fee95f985"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f1aa398473b3ee611e6ab7ed6fb619b8640109762acc6e0b789d4740a102b54b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "14a4733e8a8bc5176e3f889d2c2a7c34efe56f85ddbc215bedbb90dbf70dba64"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8517cd6f7300fec15656f7252aa976ec5888136bec053bd59b08c599f6204842"
+    sha256 cellar: :any,                 arm64_linux:   "ac8c068238acd90f2a0e52226d02a4924da4087a345845325f2e0246cf84f1b0"
+    sha256 cellar: :any,                 x86_64_linux:  "458002c0c18a6976226a08a0823abff8d5aadb10d8dd48deb69aa8205512e04f"
   end
 
   depends_on "node"
@@ -24,13 +24,29 @@ class AppleHealthMcp < Formula
   end
 
   test do
-    json = <<~JSON
-      {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26"}}
-      {"jsonrpc":"2.0","id":2,"method":"tools/list"}
-    JSON
+    require "json"
+    require "open3"
+    require "timeout"
 
-    ENV["NODE_NO_WARNINGS"] = "1"
-    output = pipe_output("#{bin}/apple-health-mcp 2>&1", json, 1)
-    assert_empty output
+    messages = [
+      { jsonrpc: "2.0", id: 1, method: "initialize", params: {
+        protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "brew-test", version: "1" }
+      } },
+      { jsonrpc: "2.0", method: "notifications/initialized" },
+      { jsonrpc: "2.0", id: 2, method: "tools/list" },
+    ]
+    env = { "HEALTH_DATA_DIR" => testpath.to_s, "NODE_NO_WARNINGS" => "1" }
+    Open3.popen3(env, bin/"apple-health-mcp") do |stdin, stdout, _stderr, wait_thread|
+      begin
+        messages.each { |message| stdin.puts(JSON.generate(message)) }
+        stdin.close
+        responses = Timeout.timeout(30) { Array.new(2) { JSON.parse(stdout.gets) } }
+      ensure
+        Process.kill("INT", wait_thread.pid) if wait_thread.alive?
+      end
+      assert_predicate wait_thread.value, :success?
+      assert_equal "apple-health-mcp", responses.dig(0, "result", "serverInfo", "name")
+      assert_includes responses.dig(1, "result", "tools").map { |tool| tool["name"] }, "health_schema"
+    end
   end
 end

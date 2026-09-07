@@ -1,18 +1,18 @@
 class Kumo < Formula
   desc "Lightweight AWS service emulator written in Go"
   homepage "https://github.com/sivchari/kumo"
-  url "https://github.com/sivchari/kumo/archive/refs/tags/v0.27.0.tar.gz"
-  sha256 "aeb41bdc7e70a70643512409ab4281981add0078f05aba764c883a170eb74c30"
+  url "https://github.com/sivchari/kumo/archive/refs/tags/v0.29.0.tar.gz"
+  sha256 "53bdf4c857eb6e37330a652a6c3074ebcf739b1a1f6a7a15611867a45d812457"
   license "MIT"
   head "https://github.com/sivchari/kumo.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2b304f5f705535cddf06df066d09efce99e98bcd173fc229739b06c3afa6630a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b304f5f705535cddf06df066d09efce99e98bcd173fc229739b06c3afa6630a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2b304f5f705535cddf06df066d09efce99e98bcd173fc229739b06c3afa6630a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "339dac7b26fe7a3fc56ffd1cbdc47b08cf58f0999364300ab2b6c1c6fcf2faa3"
-    sha256 cellar: :any,                 x86_64_linux:  "de713ecc42986483cd858ec34968ed0caf562c106bcac09e404503c15b5f3c3c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7ba873052a8450f190f55c89607a69755e39602bfd7cbb9b536385fd82aecfde"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7ba873052a8450f190f55c89607a69755e39602bfd7cbb9b536385fd82aecfde"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7ba873052a8450f190f55c89607a69755e39602bfd7cbb9b536385fd82aecfde"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1e9fbcb9da893c558cf29ff763b60f5dd6dac1f09d5ddb3f04adafa76ecf6525"
+    sha256 cellar: :any,                 x86_64_linux:  "6e60ed14b02519cf0131be5f73737449f6de35a9345e17dbbcaaa07440395717"
   end
 
   depends_on "go" => :build

@@ -18,7 +18,6 @@ env:
   HOMEBREW_GITHUB_ACTIONS: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
   HOMEBREW_NO_INSTALL_FROM_API: 1
-  HOMEBREW_NO_REQUIRE_TAP_TRUST: 1
   HOMEBREW_RELOCATABLE_INSTALL_NAMES: 1
   HOMEBREW_ARM64_TESTING: 1
 
@@ -31,7 +30,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/homebrew/ubuntu24.04:main@sha256:0198b25527d3b59a90a931f297a8c1f6c34022a8861896ccd4f7371a8fa729fd
+      image: ghcr.io/homebrew/ubuntu24.04:main@sha256:420fa0f122278b7bada6b1bf1fe6b18cd1b0d64ab20019ff7a197491f9f98630
     env:
       HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
     outputs:
@@ -121,6 +120,22 @@ jobs:
         with:
           bottles-directory: ${{ env.BOTTLES_DIR }}
           cleanup: ${{ matrix.cleanup }}
+
+      - name: Prepare Intel macOS dependencies
+        if: >-
+          github.event_name == 'pull_request' &&
+          matrix.runner == 'macos-15-intel' &&
+          contains(github.event.pull_request.labels.*.name, 'CI-source-dependencies')
+        env:
+          TESTING_FORMULAE: ${{ needs.tap-syntax.outputs.testing_formulae }}
+          HOMEBREW_NO_INSTALL_FROM_API: 1
+        run: |
+          # Opt in when missing dependency bottles have a practical source build.
+          # The formula itself is still built, bottled and tested by test-bot below.
+          if [[ -n "$TESTING_FORMULAE" ]]; then
+            IFS=',' read -r -a formulae <<< "$TESTING_FORMULAE"
+            brew install --formula --only-dependencies --include-test -- "${formulae[@]}"
+          fi
 
       - name: Run brew test-bot
         id: brew-test-bot-formulae

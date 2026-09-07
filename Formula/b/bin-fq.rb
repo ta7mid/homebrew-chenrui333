@@ -1,18 +1,18 @@
 class BinFq < Formula
   desc "Jq for binary formats"
   homepage "https://github.com/wader/fq"
-  url "https://github.com/wader/fq/archive/refs/tags/v0.17.0.tar.gz"
-  sha256 "c5658b2bc635a1d344c64e37d7311157f0fc4b20cc3cfa4d09bdd2f023692d57"
+  url "https://github.com/wader/fq/archive/refs/tags/v0.18.0.tar.gz"
+  sha256 "2580de6fb21281a262f99f24d585a925cef71f158c2b24a34125e1b29bc612ef"
   license "Apache-2.0"
   head "https://github.com/wader/fq.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "92765117fb16816140e29a2410e8f3aff57574a425377171985558d2749cbbbf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "92765117fb16816140e29a2410e8f3aff57574a425377171985558d2749cbbbf"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "92765117fb16816140e29a2410e8f3aff57574a425377171985558d2749cbbbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a4e16e017be5981026faef738935cd99b42fe4d0feb3f3a7d9569b7d4ea7c557"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a767da0dc6f89452113e0ea73ced3a4b9cb596a10be7b6aa2963617f8a54cc0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e5d2d50795112e0ddccb8ce520036341e7d9350561bb019d3192305fd2c0e29b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e5d2d50795112e0ddccb8ce520036341e7d9350561bb019d3192305fd2c0e29b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e5d2d50795112e0ddccb8ce520036341e7d9350561bb019d3192305fd2c0e29b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1733605348f7389bea6bdea05e25b648e57db49aae8570729a72922a0e9a1740"
+    sha256 cellar: :any,                 x86_64_linux:  "96dc51a3c7b1fe35d9ad1f8b67c987e959cfa73485461284466c7a16633dc17a"
   end
 
   depends_on "go" => :build

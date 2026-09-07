@@ -1,18 +1,18 @@
 class TerminalMcp < Formula
   desc "Headless terminal emulator exposed via MCP for AI assistants"
   homepage "https://github.com/elleryfamilia/terminal-mcp"
-  url "https://github.com/elleryfamilia/terminal-mcp/archive/refs/tags/v0.4.2.tar.gz"
-  sha256 "ccd436a7949d32368cdc26184099c507781cd02157d99481fe7e1ebc85e8009b"
+  url "https://github.com/elleryfamilia/terminal-mcp/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "be36a319e0ff839118bdfb38a2517eed3d0956f79ded90118602792b19ef158e"
   license "MIT"
   head "https://github.com/elleryfamilia/terminal-mcp.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any,                 arm64_tahoe:   "23b58d89282b8579d3828f2c20c58c9ad5b1327ec548cb82fa75b2f9d96536fc"
-    sha256 cellar: :any,                 arm64_sequoia: "bf750799577b6d2047bd887c422185067f7c93ab4c98bb1edac2258e8b484d28"
-    sha256 cellar: :any,                 arm64_sonoma:  "bf750799577b6d2047bd887c422185067f7c93ab4c98bb1edac2258e8b484d28"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1fa617ff3efad91581edaec147b6e726e419e3d06f6ee5f5276e2f83c194d562"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "da2c436a5096d99f6533e3207248f3b262da2ce801c5e70c3fa2272b8404982b"
+    sha256 cellar: :any,                 arm64_tahoe:   "00f8c25b38374ce7f722559325e808721fe99171e9ff7d52ab5ae7fe73bc8821"
+    sha256 cellar: :any,                 arm64_sequoia: "00f8c25b38374ce7f722559325e808721fe99171e9ff7d52ab5ae7fe73bc8821"
+    sha256 cellar: :any,                 arm64_sonoma:  "00f8c25b38374ce7f722559325e808721fe99171e9ff7d52ab5ae7fe73bc8821"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7afd8f72c762d2444dbbe75bfcf4a32ce43e1b587c95a513431edc4b2bf7bf67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f9b626cbd759b4e1c62bc3e77036c3e9df28f332aa0ad6c0190f7367c0077e0"
   end
 
   depends_on "node"

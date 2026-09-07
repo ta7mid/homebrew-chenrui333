@@ -1,15 +1,15 @@
 class Dgop < Formula
   desc "API & CLI for System & Process Monitoring"
   homepage "https://danklinux.com/"
-  url "https://github.com/AvengeMedia/dgop/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "afd2f9542ce25c739b13d6213fdfbc5493bce537d5afec309b4df945e318ff1a"
+  url "https://github.com/AvengeMedia/dgop/archive/refs/tags/v1.6.0.tar.gz"
+  sha256 "ab97d4bd9483de47051f984ecf3f877d289c316f8a35a9c3d9e5cfaa73b7f2b9"
   license "MIT"
   head "https://github.com/AvengeMedia/dgop.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "aba159227acf5a5e34d2e0e1ae07845b0b8c8b6a84f1d08b51013353d32eb662"
-    sha256 cellar: :any,                 x86_64_linux: "dadc2165b5437c0e14eeae9b6fb4e0b39edbf612b40c212bc6875468c14d2ffa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "359532ca0d865bf2427a4164437fe579b10b665834896e7ff434aad055d052eb"
+    sha256 cellar: :any,                 x86_64_linux: "2d8cc358a102d2022345d898a54534e5c9c8376cb2c29e10bc44ecea9f5087a0"
   end
 
   depends_on "go" => :build

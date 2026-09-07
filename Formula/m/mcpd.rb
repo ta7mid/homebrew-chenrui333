@@ -1,18 +1,18 @@
 class Mcpd < Formula
   desc "Declaratively manage Model Context Protocol (MCP) servers"
-  homepage "https://mozilla-ai.github.io/mcpd/"
-  url "https://github.com/mozilla-ai/mcpd/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "26682845c7a613f2809cfe95232e1601b753188f45e005323b8bee148a6f20d6"
+  homepage "https://github.com/mozilla-ai/mcpd"
+  url "https://github.com/mozilla-ai/mcpd/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "7191c171e423371fec0b8c2d6d638e1af1faed146d146fed4c06a1be07f2d952"
   license "MIT"
   head "https://github.com/mozilla-ai/mcpd.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "49c784e2d2efbfacc83fa67fb3d5d93b88721898f391a8a8bd75dacd64c50635"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "49c784e2d2efbfacc83fa67fb3d5d93b88721898f391a8a8bd75dacd64c50635"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "49c784e2d2efbfacc83fa67fb3d5d93b88721898f391a8a8bd75dacd64c50635"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b5b2c3ded9838b7d06cf7487a537d59acf0985b6af3b8b885452d1cecc1c207d"
-    sha256 cellar: :any,                 x86_64_linux:  "6c5cc855a3e9ace5b882281ad0cb848c9b1a1df66998b7be1134b4817580378c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "46a311f18730a6148af3e34522b36cf4931d6eae716fe1fa12e97b53fccabfea"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "46a311f18730a6148af3e34522b36cf4931d6eae716fe1fa12e97b53fccabfea"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "46a311f18730a6148af3e34522b36cf4931d6eae716fe1fa12e97b53fccabfea"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "595b83db00e792e06c32cf7744ddc24739012daf3c99c47f8faa60f9861bb2d8"
+    sha256 cellar: :any,                 x86_64_linux:  "12a08ea9086775db68643218f9efce2eb7880818dde11b9bcb74e709e9612945"
   end
 
   depends_on "go" => :build

@@ -3,18 +3,18 @@ class Cartography < Formula
 
   desc "Pull infrastructure assets and relationships into a Neo4j graph database"
   homepage "https://github.com/cartography-cncf/cartography"
-  url "https://github.com/cartography-cncf/cartography/archive/refs/tags/0.139.1.tar.gz"
-  sha256 "13d43636a7bf94368a101b750d2bfd406a83d04c48107af65ced55400fb993eb"
+  url "https://github.com/cartography-cncf/cartography/archive/refs/tags/0.141.0.tar.gz"
+  sha256 "f1f7d662b22c9430fb9c9d86ec55c75152283815d3e599ddd4bd18b8791d0a63"
   license "Apache-2.0"
   head "https://github.com/cartography-cncf/cartography.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any, arm64_tahoe:   "c6ce42088a46eb798ba3f381e034de80b7029e17bd911e1c421f515476bf350e"
-    sha256 cellar: :any, arm64_sequoia: "1ecbce0b3316d18e76b35d07741fdc14272b29aef3c208738523998f9793ee19"
-    sha256 cellar: :any, arm64_sonoma:  "ef750be12c022189fa7de974dc84810beaf3c1e6f8bb1a46e74b0c95757ce0b8"
-    sha256 cellar: :any, arm64_linux:   "689e4c62dbe1b5d8cfeb8fceadf41d7383735cb6e8cd175dbc8454c5c1747c32"
-    sha256 cellar: :any, x86_64_linux:  "353e84f938fc2f7236c30d66bce8b651d054c08c52e164c6d8ec3f6327ac2ba7"
+    sha256 cellar: :any, arm64_tahoe:   "3250ec478598720f8ff0c02b0d8dea5b9617bc430659eb4d13058c87d123b304"
+    sha256 cellar: :any, arm64_sequoia: "1f21ef03ea194d76f725eb5b09b97ed501c0e0e889c184f752a7f8e460bd062c"
+    sha256 cellar: :any, arm64_sonoma:  "80f69cefb97449dfdba3c454c7716b14ba0f2f19e726ca6f1a7fe89810d69292"
+    sha256 cellar: :any, arm64_linux:   "62f43ee15740a6e3669d67e3fca1959ddaa61bc56265d12148a077a6aae8f381"
+    sha256 cellar: :any, x86_64_linux:  "7879d4f75f7e0d9321ce3132fee8c7c2d7662cbaa327cc1e32e1e9ada909a290"
   end
 
   depends_on "pkgconf" => :build

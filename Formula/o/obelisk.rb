@@ -1,18 +1,18 @@
 class Obelisk < Formula
   desc "Durable and deterministic workflow engine"
   homepage "https://github.com/obeli-sk/obelisk"
-  url "https://github.com/obeli-sk/obelisk/archive/refs/tags/v0.41.0.tar.gz"
-  sha256 "eb58a1327b39897500f5f5ccf97d47061cab2beaa71f54b73c9c4065bf556078"
+  url "https://github.com/obeli-sk/obelisk/archive/refs/tags/v0.41.5.tar.gz"
+  sha256 "cb4c76c8e64f347722913c7c7e3b87ca15647160871a4874b80965ac2e8103dd"
   license "AGPL-3.0-only"
   head "https://github.com/obeli-sk/obelisk.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e6751a8f3f2788eea4dbb2574bf7e6270cf6409a5658c588ca1d54892b1d1d38"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "faead6659ff8ed38659df5e4f25d77073b573ba17b7fef429abbf037127033ae"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6a8f4ae5b31ffcb28c5fc1898b5e6bef5801fab6ab9fbc3548f4bed6d41eaefe"
-    sha256 cellar: :any,                 arm64_linux:   "9aebfb36d3c97d62aec94f50471d0528c38a3988bd151d85bc370b6dffd52749"
-    sha256 cellar: :any,                 x86_64_linux:  "c68122ea1d96e66168ebe6e7bd09cfaa3dbd1b76fede16d0f5d436eb8b2f8672"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "52ec05227a85c828d1dc8cd57d0c746fd7cc27c6ab79764b5e6b5cdb95c36006"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "60db58f3174648d00a702b80a2283901acf30c927d2f4694baee5d2cee6d330a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55d69145cd57b940b1692f1e8c025183c3d3bc52899661047d62ffa484e8bd94"
+    sha256 cellar: :any,                 arm64_linux:   "4634fb01c3a78dfd122782d35411f9bc2bea9ec4f2d0cd740a311087836e8eaa"
+    sha256 cellar: :any,                 x86_64_linux:  "8714d5f4c3aff51e01e33ea9ea5ef8b537c4fd65d4221b0a41881aa3d1fe331e"
   end
 
   depends_on "pkgconf" => :build

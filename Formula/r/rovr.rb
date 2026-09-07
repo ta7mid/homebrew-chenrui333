@@ -3,19 +3,19 @@ class Rovr < Formula
 
   desc "Post-modern terminal file explorer"
   homepage "https://github.com/NSPC911/rovr"
-  url "https://github.com/NSPC911/rovr/archive/refs/tags/v0.8.2.post1.tar.gz"
-  version "0.8.2.post1"
-  sha256 "b9dabd1a623c59b1ff3a8832fe68b21756c637bb06cc5b965428996b2cad0093"
+  url "https://github.com/NSPC911/rovr/archive/refs/tags/v0.10.1.post1.tar.gz"
+  version "0.10.1.post1"
+  sha256 "ee1688beab8829e2407c93ea6dd17bf18d8eccc10484fff8034959b93b3d445c"
   license "MIT"
   head "https://github.com/NSPC911/rovr.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any,                 arm64_tahoe:   "c9b4ca772c6e0b8358748fc5a0a3b55557ea13b44ace9f860bdfe1266ecf9e36"
-    sha256 cellar: :any,                 arm64_sequoia: "af38043cd8b9b6dd6e7f3d16c447510f97d5fdc46dd827217c921b43c485f640"
-    sha256 cellar: :any,                 arm64_sonoma:  "cadc68c90a98d8562dab018c41f17c5468f1a08b8203cfc15810a8138225fd96"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5778a8f4d36ed01741aa79ad8b3297445bb166f7bbd5750cb8ab49b28ea4440d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "85cbec8098fc692ad9fb1c240a6db1689ae90deedbb3e7b16ee380f2a2735471"
+    sha256 cellar: :any, arm64_tahoe:   "fd736282957d854f52f5f07508ad14b75b72bf0c2a1933f11c5e542938d13bb9"
+    sha256 cellar: :any, arm64_sequoia: "df3084dae0dfe726182a1e3f993364e1c41d6293cda9333becaf812169a4c17b"
+    sha256 cellar: :any, arm64_sonoma:  "9fc41084b58bbea104d4afdbba068ed27d1cf522deee49b9c8be42b9063802b3"
+    sha256 cellar: :any, arm64_linux:   "b97777e5d232ba56c1043e85a2138898a13481b88bcea8ebf48988646122f0f3"
+    sha256 cellar: :any, x86_64_linux:  "08fc1aadf081ac8d0d860bb385592b54955965304cc26f0edae457a61014c9ca"
   end
 
   depends_on "pkgconf" => :build
@@ -168,12 +168,12 @@ class Rovr < Formula
   end
 
   def install
-    ENV.append "CPPFLAGS", "-I#{Formula["jpeg-turbo"].opt_include}"
-    ENV.append "LDFLAGS", "-L#{Formula["jpeg-turbo"].opt_lib}"
+    ENV.append "CPPFLAGS", "-I#{formula_opt_include("jpeg-turbo")}"
+    ENV.append "LDFLAGS", "-L#{formula_opt_lib("jpeg-turbo")}"
 
     if OS.linux?
-      ENV.append "CPPFLAGS", "-I#{Formula["zlib-ng-compat"].opt_include}"
-      ENV.append "LDFLAGS", "-L#{Formula["zlib-ng-compat"].opt_lib}"
+      ENV.append "CPPFLAGS", "-I#{formula_opt_include("zlib-ng-compat")}"
+      ENV.append "LDFLAGS", "-L#{formula_opt_lib("zlib-ng-compat")}"
     end
 
     virtualenv_install_with_resources

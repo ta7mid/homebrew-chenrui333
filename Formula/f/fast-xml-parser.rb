@@ -1,13 +1,13 @@
 class FastXmlParser < Formula
   desc "Validate XML, Parse XML and Build XML rapidly"
   homepage "https://naturalintelligence.github.io/fast-xml-parser/"
-  url "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.10.1.tgz"
-  sha256 "96c5fb404c640da25ceac9cceebe599d703df1fb22887ef6c8d768bd56d1c6d6"
+  url "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.11.1.tgz"
+  sha256 "79fcc536462d1d0e7bcc20b434b5792be4c6cc79ebcf1a31bf9b440f4e7598a5"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, all: "822a4a10b6fb7211260b63a2ab327aad1eb22d9fb649a9056f39d9220ed957a8"
+    sha256 cellar: :any_skip_relocation, all: "072763f834935eb9fcc4c759333048fc9ece1a68464ae42925fe70497735cf14"
   end
 
   depends_on "node"

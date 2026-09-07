@@ -1,18 +1,18 @@
 class Olla < Formula
   desc "Lightweight & fast AI inference proxy for self-hosted LLMs backends"
   homepage "https://thushan.github.io/olla/"
-  url "https://github.com/thushan/olla/archive/refs/tags/v0.0.28.tar.gz"
-  sha256 "e025ac4b55601e10d6b5f39c67f24f87d60534cc5f3a8cbf444f9be3baf069f1"
+  url "https://github.com/thushan/olla/archive/refs/tags/v0.0.29.tar.gz"
+  sha256 "9ae9d83bcb631f592fa987a14468b1a43cefb662f8259da750044d932a14a2d7"
   license "Apache-2.0"
   head "https://github.com/thushan/olla.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/chenrui333/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "dd869e106e00c262abd2a2094a411316811457ed93e2ed8827f822ecf3031e6c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dd869e106e00c262abd2a2094a411316811457ed93e2ed8827f822ecf3031e6c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dd869e106e00c262abd2a2094a411316811457ed93e2ed8827f822ecf3031e6c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "92566806e23556946ccf0a1653445a8e310ee36e28a4d883b6b51dbd98b8ce20"
-    sha256 cellar: :any,                 x86_64_linux:  "2724a9f1761d4efa7457c0e53441b3b72650ddcaa210a8ed7beab45213fa05f5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "12ae2769323071d772cefc99bb1a61e69d62f8c78ff6106d5ab6d9e18ca902ae"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "12ae2769323071d772cefc99bb1a61e69d62f8c78ff6106d5ab6d9e18ca902ae"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "12ae2769323071d772cefc99bb1a61e69d62f8c78ff6106d5ab6d9e18ca902ae"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1738acf92f66e9ce922dc92a04e6ad544ad2b91c019e4f4cb5b118c2c133d938"
+    sha256 cellar: :any,                 x86_64_linux:  "31e7eaa0aa17cf47fd1df3703dbff4ecf5fbb20ef642f83ecb2f6e78f1d240df"
   end
 
   depends_on "go" => :build

@@ -8,9 +8,7 @@ on:
 concurrency:
   group: ${{ github.event.label.name == 'pr-pull' && 'brew-pr-pull' || format('brew-pr-pull-skip-{0}', github.run_id) }}
   cancel-in-progress: false
-
-env:
-  HOMEBREW_NO_REQUIRE_TAP_TRUST: 1
+  queue: max
 
 jobs:
   pr-pull:
@@ -38,6 +36,9 @@ jobs:
         with:
           core: true
           cask: false
+
+      - name: Trust this tap
+        run: brew trust --tap "$GITHUB_REPOSITORY"
 
       - name: Set up git
         uses: Homebrew/actions/git-user-config@fc695c54c2032716dd4cedd007489c8e32fc8a5d
