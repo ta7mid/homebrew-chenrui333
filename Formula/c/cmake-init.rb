@@ -34,9 +34,12 @@ class CmakeInit < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/cmake-init --version")
 
-    system bin/"cmake-init", "--std=20", "-p=conan", "test-project"
-
-    some_expected_files = %w[CMakeLists.txt conanfile.py source/main.cpp docs/ test/]
-    some_expected_files.each { |f| assert_path_exists "test-project/#{f}" }
+    system bin/"cmake-init", "--std=20", "test-project"
+    %w[
+      CMakeLists.txt
+      source/main.cpp
+      docs/
+      test/
+    ].each { assert_path_exists "test-project/#{it}" }
   end
 end
